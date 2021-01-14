@@ -1,0 +1,32 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <button (click)=addProduct() type="button" class="mybutton">Add Product</button>
+</nav>
+
+<div class="container">
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Product name</th>
+          <th scope="col">Category</th>
+          <th scope="col">Weight</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Date of Registration</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor ="let product of product">
+            <td>{{product.id}}</td>
+            <td>{{product.pname}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.weight}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.dateOfRegistration}}</td>
+            <td><button class="btn btn-primary" (click)=updateP(product.id)>update</button></td>
+            <td><button class="btn btn-success" (click)=deleteP(product.id)>delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>

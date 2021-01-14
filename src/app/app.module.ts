@@ -1,0 +1,31 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import {  HttpClientModule} from '@angular/common/http'
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NewregistrationComponent } from './newregistration/newregistration.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    NewregistrationComponent,
+    LoginComponent,
+    HomeComponent,
+    AddProductComponent,
+    UpdateProductComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
